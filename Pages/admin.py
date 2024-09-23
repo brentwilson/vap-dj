@@ -1,9 +1,12 @@
 from django.contrib import admin
 from .models import Page
+from django.db import models
+from unfold.admin import ModelAdmin
+from unfold.contrib.forms.widgets import ArrayWidget, WysiwygWidget
 
 # Register your models here.
 @admin.register(Page)
-class PageAdmin(admin.ModelAdmin):
+class PageAdmin(ModelAdmin):
     list_display = ['title', 'slug', 'is_active']
     prepopulated_fields = {'slug': ('title',)}
     search_fields = ['title', 'content']
@@ -18,9 +21,15 @@ class PageAdmin(admin.ModelAdmin):
             'fields': ['is_active']
         }),
     ]
-    readonly_fields = ['created_at', 'updated_at']
+    readonly_fields = ['created_at', 'last_update']
     list_per_page = 10
     actions = ['make_active', 'make_inactive']
+
+    formfield_overrides = {
+        models.TextField: {
+            "widget": WysiwygWidget,
+        }
+    }
 
     def make_active(self, request, queryset):
         queryset.update(is_active=True)
