@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from .models import Page
+from forms import UserAccountForm
 
 # Create your views here.
 
@@ -12,3 +13,7 @@ def page(request, slug):
     page = Page.objects.get(slug=slug)
     context['page'] = page
     return render(request, 'page.html', context)
+
+def register(request):
+    context = { 'title': 'Register' }
+    return render(request, 'register.html', context)
