@@ -16,4 +16,13 @@ def page(request, slug):
 
 def register(request):
     context = { 'title': 'Register' }
+    if request.method == 'POST':
+        form = UserAccountForm(request.POST)
+        if form.is_valid():
+            form.save()
+            context['success'] = True
+    else:
+        form = UserAccountForm()
+        context['form'] = form
+        
     return render(request, 'register.html', context)
