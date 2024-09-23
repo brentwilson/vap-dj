@@ -1,0 +1,27 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Veterans Alliance Partners">
+  <meta name="keywords" content="Veterans, Alliance, Partners, VAP, Veterans Alliance Partners">
+  <meta name="author" content="Veterans Alliance Partners">
+  <title>Veterans Alliance Partners - {{ title }} </title>
+  <link rel="stylesheet" href="{% static 'styles/vap.css' %}">
+</head>
+<body>
+  <div class="container-fluid">
+    {% block maincontent %}
+   
+    {% endblock maincontent %}
+  </div>
+
+  <footer>
+    <p> @ 2024 Veterans Alliance Partners</p>
+  </footer>
+  {% block extrascripts %}
+  
+  {% endblock extrascripts %}
+</body>
+</html>

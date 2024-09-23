@@ -1,0 +1,14 @@
+/*  Buttons */
+
+.btn-primary {
+  background-color: #25408F;
+}
+
+.btn-primary:hover {
+  background-color: #1A2D6D;
+}
+
+.btn-primary:active {
+  background-color: #1A2D6D;
+}
+
