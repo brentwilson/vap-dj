@@ -10,8 +10,8 @@ def index(request):
 
 def page(request, slug):
     context = { 'title': slug }
-    page = Page.objects.get(slug=slug)
-    context['page'] = page
+    page_content = Page.objects.get(slug=slug)
+    context['page_content'] = page_content
     return render(request, 'page.html', context)
 
 def register(request):
