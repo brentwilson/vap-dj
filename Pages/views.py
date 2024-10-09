@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from .models import Page
-from forms import UserAccountForm
+from .forms import UserAccountForm
 
 # Create your views here.
 

@@ -10,7 +10,7 @@ class QuoteItemsInline(TabularInline):
 
 @admin.register(Quote)
 class QuoteAdmin(ModelAdmin):
-    list_display = ['company', 'total_price', 'status']
+    list_display = ['company', 'quote_total_price', 'status']
     search_fields = ['company','status']
     list_filter = ['status', 'company']
     inlines = [QuoteItemsInline]

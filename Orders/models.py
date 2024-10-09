@@ -19,7 +19,7 @@ class Quote(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
     
-    def total_price(self):
+    def quote_total_price(self):
         total = 0
         for item in self.quoteitems_set.all():
             total += item.total_price()
