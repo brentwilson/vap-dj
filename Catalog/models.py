@@ -5,6 +5,7 @@ class Category(models.Model):
     slug = models.SlugField(max_length=200, unique=True)
     description = models.TextField()
     is_active = models.BooleanField(default=True)
+    image = models.ImageField(upload_to='images/categories', blank=True, null=True)
     meta_keywords = models.CharField(max_length=255)
     meta_description = models.CharField(max_length=255)
     created_at = models.DateTimeField(auto_now_add=True)

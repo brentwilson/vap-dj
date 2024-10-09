@@ -1,6 +1,8 @@
 from django.shortcuts import render
 from .models import UserAccount
 from django.contrib.auth import authenticate, login
+from .forms import UserAccountForm
+from django.http import JsonResponse
 
 # Create your views here.
 def index(request):
@@ -21,3 +23,17 @@ def login(request):
         else:
             context['error'] = 'Invalid username or password'
     return render(request, 'login.html', context)
+
+def register(request):
+    context = { 'title': 'Register' }
+    if request.method == 'POST':
+        form = UserAccountForm(request.POST)
+        if form.is_valid():
+            form.save()
+            context['success'] = True
+            return JsonResponse(context)
+    else:
+        form = UserAccountForm()
+        context['form'] = form
+        
+    return render(request, 'register.html', context)
