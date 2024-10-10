@@ -177,7 +177,7 @@ body {
 
 /* cart style */
 .cart-window {
-  /* display: none; */
+  display: none;
   width: 40vw;
   background: #fff;
   border: #1a2d6d solid 2px;
@@ -186,4 +186,21 @@ body {
   right: 0;
   height: 100vh;
   overflow: auto;
+}
+
+.close-cart {
+  position: absolute;
+  top: 0;
+  right: 5px;
+  padding: 10px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.cart-footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  position: fixed;
+  bottom: 0;
 }

@@ -29,7 +29,7 @@
             <a
               class="inline-block no-underline hover:text-black hover:underline py-2 px-4"
               href="#"
-              >Categories</a
+              >Products</a
             >
           </li>
           <li>
@@ -85,11 +85,7 @@
         </div>
       </button>
 
-      <button
-        type="button"
-        x-data="{id:'modal-2'}"
-        @click="$dispatch('modal-overlay', {id})"
-      >
+      <button type="button" onclick="openCart()">
         <span
           class="flex gap-2 group items-center text-sm text-white transition-all duration-500"
         >

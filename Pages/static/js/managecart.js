@@ -52,7 +52,10 @@ function getcart() {
   }
 }
 
-function openModal() {
-  let modal = document.getElementById("cart-modal");
-  modal.style.display = "block";
+function openCart() {
+  $(".cart-window").fadeIn("slow");
+}
+
+function closeCart() {
+  $(".cart-window").fadeOut("slow");
 }

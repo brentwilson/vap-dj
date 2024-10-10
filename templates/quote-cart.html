@@ -2,7 +2,7 @@
 <div class="cart-window p-3">
   <div class="cart-header">
     <h1>Quote Cart</h1>
-    <button class="close-cart" id="close-cart">
+    <button class="close-cart" id="close-cart" onclick="closeCart()">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         class="icon icon-tabler icon-tabler-x"
@@ -29,5 +29,11 @@
         <button class="remove-item">Remove</button>
       </div>
     </div>
+  </div>
+  <div class="cart-footer">
+    <button class="clear-cart w-1/2">Clear Cart</button>
+    <button class="submit-quote w-1/2 bg-indigo-950 text-white">
+      Submit Quote
+    </button>
   </div>
 </div>
