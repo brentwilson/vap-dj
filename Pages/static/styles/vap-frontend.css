@@ -146,6 +146,8 @@ body {
   background-image: url("/static/images/main-hero-bg.png");
   height: 70vh;
   background-position: 30%;
+  background-repeat: none;
+  background-size: cover;
 }
 
 /* navbar */
@@ -171,4 +173,17 @@ body {
 
 .btn-primary:active {
   background-color: #1a2d6d;
+}
+
+/* cart style */
+.cart-window {
+  /* display: none; */
+  width: 40vw;
+  background: #fff;
+  border: #1a2d6d solid 2px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  overflow: auto;
 }
