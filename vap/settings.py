@@ -96,10 +96,10 @@ DATABASES = {
      'default': {
 
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'vap',
+        'NAME': 'vap2',
         'USER': 'brentwilson',
-        'PASSWORD': 'Wilbur21!',
-        'HOST': 'localhost',
+        'PASSWORD': 'CiYWXUTB7UeU0khmkWEaepN36mrTZGmT4ZaaSwtTiLF1tQDYyelidsZwfvFyAPR4',
+        'HOST': '85.31.232.250',
         'PORT': '5432',
 
     }
